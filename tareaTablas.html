@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Tablas de multiplicar</title></title>
+</head>
+<body>
+    <h1>Tablas de Multiplicar</h1>
+
+    <script>
+            
+        var user =  window.prompt("Tamaño máximo de la Tabla")
+        var filas =  parseInt(user);
+        var columnas = parseInt(user);
+
+        var tablas=creaTabla(filas,columnas);
+        imprimirTabla(tablas);
+
+        function creaTabla(filasPar,columnasPar)
+        {
+            var matr=[];
+            var fila=[];
+
+            for (var i = 0; i <= filasPar; i++) {
+                fila = [];
+                for (var j = 0; j <= columnasPar; j++) {
+                        fila.push(i * j);
+                }
+                matr.push(fila);
+            }
+            return matr;
+        }
+    
+        function imprimirTabla(matriz)
+        {
+            document.write('<table border=1>')   
+            for(var i=0;i<matriz.length;i++)
+            { document.write('<tr style="background:#3E346B;color:white; font-size: 28px;" >')
+                for(var j=0;j<matriz[i].length;j++)
+                {
+                    document.write('<td>')
+                    document.write(matriz[i][j])
+                    console.log(matriz[i][j]);
+                    document.write('</td>')
+                }
+            document.write('</tr>')
+            }
+            document.write('</table>')
+        }
+
+    </script>
+
+</body>
+</html>
