@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>JavaScript</title>
+</head>
+<body>
+    <h1> Hola mundo en JavaScript </h1>
+    <script>
+        //window.alert("Hola JavaScript");
+        //var nombre = window.prompt("Cual es tu nombre");
+        //window.confirm("Hola " + nombre + " quieres aprender mas de JS?");
+        //Secuencias de escape si uso comillas simples y adentro tambien 
+        window.document.write('<h1 style="color:red;"> Me gusta JavaScript</h1>');
+        window.console.log("Hola juan carlos");
+
+        var lenguajes = ['HTML', 'CSS', 'JavaScript', 'PHP'];
+        var otrosL = ['C++', 'Java', 'Python'];
+
+        document.write('Lenguajes <br>');
+        imprimir(lenguajes);
+        document.write('OtrosL <br>');
+        imprimir(otrosL);
+        //ejemplo de concatenar
+        document.write('Concatenacion <br>');
+        imprimir(lenguajes.concat(otrosL));
+
+        //imprimir(lenguajes)
+
+        document.write('Lenguajes: ' + lenguajes.join(' - ') + '<br>');
+        document.write('Otros: ' + otrosL.join(' - ') + '<br>');
+
+        function imprimeRenglon(elemento, indice, arreglo)
+        {
+            document.write('<tr>')
+                document.write('<td style="border:solid">')
+                document.write(indice);
+                document.write('</td>')
+                document.write('<td style="border:solid">')
+                document.write(arreglo[indice] + '<br>');
+                document.write('</td>')
+                document.write('</tr>')
+        }
+
+        function imprimir(tabla)
+        {
+            document.write('<table>')     
+            tabla.forEach(imprimeRenglon);
+            //otrosL.forEach(imprimeRenglon);
+            //for(var i = 0; i < lenguajes.length; i++)
+            /*for(var x in tabla)
+            {
+                document.write('<tr>')
+                document.write('<td style="border:solid">')
+                document.write(x);
+                document.write('</td>')
+                document.write('<td style="border:solid">')
+                document.write(tabla[x] + '<br>');
+                document.write('</td>')
+                document.write('</tr>')
+            }*/
+            document.write('</table>')
+        }
+    </script>
+
+    <!--Tarea hacer un script para mostar las tablas de multiiplicar del 1 al 9 -->
+    <!--Una funcion para crear la  tabla arreglo de arreglos  y otra para imprimir-->
+    <!--La consola nos va a swervir para hacer prubas o para depurar solamnete-->
+    <!--Conviene cargar vhasta el final el javascpri para que cargue primero los elemntos de la pagina-->
+</body>
+</html>

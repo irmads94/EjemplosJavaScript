@@ -15,13 +15,12 @@
         //var nombre= window.prompt("¿Cual es tu nombre?")
         //window.confirm("Hola " + nombre+ " ¿Quieres aprender mas JS?")
         window.document.write('<h1 style="color:red;">Me gusta JavaScript</h1>');
-        window.console.log("Hola consola");
         
-
+        var otros=['C++','JavaScript']
 
 
         //document.write('<table>')
-        //var lenguajes=['HTML','CSS','JavaScript','PHP']
+        var lenguajes=['HTML','CSS','JavaScript','PHP']
         
         //for(var i=0;i<lenguajes.length;i++){
           //  document.write('<tr>')
@@ -32,28 +31,34 @@
         //}
         
         //document.write('</table>')
-    //</script>
-    
 
 
    // <!-- Con funcion-->
-    //<script>    
     
        var lenguajes=['HTML','CSS','JavaScript','PHP']
        imprimir(lenguajes)
+
+
+
     function imprimir(tabla)
     {
          document.write('<table>')   
-        for(var i=0;i<tabla.length;i++){
+        for(var x in tabla){//for(var i=0;i<tabla.length;i++){
             document.write('<tr>')
             document.write('<td style="border:solid 0.5px')
-            document.write(tabla[i])
+            document.write(x)
+            document.write('</td>')
+            
+            document.write('<td style="border:solid 0.5px')
+            document.write(tabla[x])
             document.write('</td>')
             document.write('</tr>')
         }
         
         document.write('</table>')
     }
+
+
     </script>
  
 </body>
